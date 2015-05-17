@@ -13,6 +13,9 @@ INCLUDE_DIRECTORIES(
   ${CATCH_INCLUDE_DIR}
 )
 
+
+add_subdirectory(examples)
+
 ADD_SUBDIRECTORY(doc)
 
 enable_testing(true)

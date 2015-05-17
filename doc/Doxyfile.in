@@ -1,15 +1,17 @@
 CITE_BIB_FILES         = @srcdir@/references.bib
 ENABLE_PREPROCESSING   = YES
-EXAMPLE_PATH           = @top_srcdir@/examples
+EXAMPLE_PATH           = @PROJECT_SOURCE_DIR@/examples
 EXTRACT_ALL            = YES
 GENERATE_HTML          = YES
 GENERATE_LATEX         = NO
-HTML_OUTPUT            = @builddir@/html
-INPUT                  = @top_srcdir@/include
+HTML_OUTPUT            = @PROJECT_BINARY_DIR@/doc/html
+INPUT                  = @doxy_main_page@ \
+                         @PROJECT_SOURCE_DIR@ \
+                         @PROJECT_BINARY_DIR@
 INTERNAL_DOCS          = NO
 FILE_PATTERNS          = *.hpp *.cpp
 MACRO_EXPANSION        = NO
-OUTPUT_DIRECTORY       = @top_builddir@/doc
+OUTPUT_DIRECTORY       = @PROJECT_BINARY_DIR@/doc
 PROJECT_NAME           = "@CMAKE_PROJECT_NAME@"
 PROJECT_NUMBER         = @VERSION_MAJOR@.@VERSION_MINOR@.@VERSION_PATCH@
 RECURSIVE              = YES
@@ -17,15 +19,11 @@ SHOW_FILES             = NO
 SHOW_NAMESPACES        = NO
 SOURCE_BROWSER         = NO
 SORT_MEMBERS_CTORS_1ST = YES
-STRIP_FROM_PATH        = @top_srcdir@/include @top_srcdir@/src
 TAB_SIZE               = 4
 USE_MATHJAX            = YES
 QUIET                  = YES
 WARN_IF_UNDOCUMENTED   = YES
 WARNINGS               = YES
 STRIP_FROM_PATH        = @PROJECT_SOURCE_DIR@ \
-                         @PROJECT_BINARY_DIR@
-INPUT                  = @doxy_main_page@ \
-                         @PROJECT_SOURCE_DIR@ \
                          @PROJECT_BINARY_DIR@
 USE_MDFILE_AS_MAINPAGE = @doxy_main_page@
