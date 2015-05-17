@@ -1,0 +1,11 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
+PROJECT(Examples)
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+
+INCLUDE_DIRECTORIES(
+  ../include
+)
+
+ADD_EXECUTABLE(spinors spinors.cpp)
+
