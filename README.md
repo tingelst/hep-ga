@@ -1,3 +1,6 @@
+[![Build Status](https://semaphoreci.com/api/v1/projects/94e5b3f9-7cf9-4ac1-a7eb-8f818089beec/444798/badge.svg)](https://semaphoreci.com/tingelst/hep-ga)
+--
+
 # hep-ga
 
 ## Project description
