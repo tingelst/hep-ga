@@ -2,7 +2,6 @@
 #include "catch.hpp"
 
 #include <tuple>
-
 #include <hep/ga/difference.hpp>
 #include <hep/ga_types.hpp>
 
