@@ -8,18 +8,16 @@ list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/")
 # Catch Unit Tests
 find_package(Catch REQUIRED)
 
-INCLUDE_DIRECTORIES(
+include_directories(
   include
   ${CATCH_INCLUDE_DIR}
 )
 
-
 add_subdirectory(examples)
 
-ADD_SUBDIRECTORY(doc)
+add_subdirectory(doc)
 
 enable_testing(true)
-#I like to keep test files in a separate source directory called test
 file(GLOB TEST_SRCS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} test/*.cpp)
 
 #Run through each source
