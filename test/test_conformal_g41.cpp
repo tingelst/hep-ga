@@ -37,32 +37,13 @@ typedef hep::multi_vector<cga, hep::list<8,16>> null_vector;
 #define e23 hep::blade<cga,  6>()
 #define em hep::blade<cga, 16>()
 #define I hep::blade<cga, 31>()
-//#define ni null_vector{-1.0, 1.0}
-//#define no null_vector{0.5, 0.5}
+#define ni null_vector{-1.0, 1.0}
+#define no null_vector{0.5, 0.5}
 
 point create_point(vector const& v)
 {
     return hep::grade<1>(v + 0.5 * v * v * ni + no);
 }
-
-
-
-template <typename A, double Ep, double Em>
-class ni : public hep::expression<A, hep::list<8,16>>
-{
-public:
-    /**
-     * Performs the computation of the component represented by \c index.
-     */
-    template <int index>
-    hep_inline typename A::scalar_type at() const
-    {
-        static_assert ((index == 8 ) || (index == 16), "component does not exist");
-
-        return static_cast<typename A::scalar_type>(1.0);
-    }
-};
-
 
 TEST_CASE("conformal")
 {
@@ -100,7 +81,6 @@ TEST_CASE("versor_product")
 //    auto p = hep::eval( v + 0.5 * v * v * ni + no );
 
     point p = create_point(v);
-
 
     std::cout << "rotor" << " ";
     std::cout << r.at<0>() << " ";
