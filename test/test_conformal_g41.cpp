@@ -7,7 +7,6 @@
 #include "hep/ga/squared_reverse_norm.hpp"
 #include "hep/ga/inversion.hpp"
 #include "hep/ga/versor_product.hpp"
-#include "../../../Library/Caches/clion11/cmake/generated/cadc454a/cadc454a/Debug/catch/src/catch/include/catch.hpp"
 
 
 typedef double scalar_type;
