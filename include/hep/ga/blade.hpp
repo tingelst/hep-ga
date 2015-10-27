@@ -43,7 +43,7 @@ public:
 	{
 		static_assert (index == blade_index, "component does not exist");
 
-		return 1.0;
+		return static_cast<typename A::scalar_type>(1.0);
 	}
 };
 
